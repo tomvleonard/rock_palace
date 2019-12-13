@@ -1,0 +1,13 @@
+%h1 Rock Palace Calendar
+
+= link_to 'New Event', new_event_path
+
+%table
+  %thead
+    %th Performer
+    %th When
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= link_to event.performer, event
+        %td= event.when

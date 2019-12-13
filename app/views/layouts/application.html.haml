@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title Rock Palace
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #wrap
+      %nav.navbar.bg-gray
+        .container
+          %a.navbar-brand{ href: '/' } Rock Palace
+      #main.container
+        .row
+          .col-sm-12
+            = yield
+    %footer.footer.container
+      < Logout Link Placeholder >
